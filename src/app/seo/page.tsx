@@ -25,9 +25,8 @@ const page = () => {
               <p>
                 Elevate Your <span className="text-blue-800">Online</span>
                 <br />
-                Presence <span className="text-red-800">
-                  with Expert{" "}
-                </span><br /> <span>SEO </span> 
+                Presence <span className="text-red-800">with Expert </span>
+                <br /> <span>SEO </span>
                 <span className="text-blue-800">Strategies</span>
               </p>
             </div>

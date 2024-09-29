@@ -31,9 +31,9 @@ const page = () => {
               </p>
             </div>
             <div className="mt-4 text-neutral-800">
-            At <strong>[Clickora]</strong>, we provide the tools, resources, and
-              mentorship <br />you need to turn your business ideas into reality. 
-              Whether <br /> you're just starting or scaling up, we help you unlock <br />
+              At <strong>[Clickora]</strong>, we provide the tools, resources, and
+              mentorship <br /> you need to turn your business ideas into reality. 
+              Whether <br /> you&#39;re just starting or scaling up, we help you unlock <br />
               opportunities for sustainable growth.
             </div>
             <div className="mt-4">

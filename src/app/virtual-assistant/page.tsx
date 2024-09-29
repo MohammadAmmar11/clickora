@@ -32,10 +32,11 @@ const page = () => {
             </div>
             <div className="mt-4 text-neutral-800">
               At <strong>[Clickora]</strong>, we offer comprehensive virtual
-              assistant services that allow <br />you to focus on what you do best
-              while we handle the rest. Our skilled <br /> professionals provide
-              support tailored to your unique needs, helping you <br />streamline
-              operations and enhance productivity.
+              assistant services that allow <br />
+              you to focus on what you do best while we handle the rest. Our
+              skilled <br /> professionals provide support tailored to your
+              unique needs, helping you <br />
+              streamline operations and enhance productivity.
             </div>
             <div className="mt-4">
               <Link href="/contact">
@@ -109,8 +110,8 @@ const page = () => {
               <h3 className="text-2xl font-semibold mb-4">Content Creation</h3>
               <p>
                 From blogs to newsletters, our virtual assistants produce
-                high-quality content that aligns with your brand's voice and
-                goals.
+                high-quality content that aligns with your brand&apos;s voice
+                and goals.
               </p>
             </div>
 
