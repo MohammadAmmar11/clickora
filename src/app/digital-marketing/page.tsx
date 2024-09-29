@@ -69,7 +69,7 @@ const page = () => {
               <p className="text-gray-700 opacity-90">
                 At <strong>[Clickora]</strong>, we provide end-to-end digital
                 marketing services tailored to your unique business goals.
-                Whether you're looking to increase brand awareness, generate
+                Whether you&apos;re looking to increase brand awareness, generate
                 leads, or boost sales, our team creates impactful campaigns that
                 deliver measurable results.
               </p>
@@ -128,7 +128,7 @@ const page = () => {
               <h3 className="text-2xl font-semibold mb-4">How We Work</h3>
               <ul className="list-disc pl-6 text-gray-700 opacity-90">
                 <li>
-                  <strong>Discovery & Strategy:</strong> We start by
+                  <strong>Discovery &amp; Strategy:</strong> We start by
                   understanding your business goals.
                 </li>
                 <li>

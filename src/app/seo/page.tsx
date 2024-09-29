@@ -64,7 +64,7 @@ const page = () => {
           </h2>
           <p className="text-lg text-center text-gray-600 mb-10">
             At <strong>[Clickora]</strong>, we understand that effective SEO is
-            not just about rankings; it’s about driving qualified traffic and
+            not just about rankings; it&apos;s about driving qualified traffic and
             converting visitors into loyal customers. Our comprehensive SEO
             services are designed to boost your online visibility and establish
             your brand as an authority in your industry.
