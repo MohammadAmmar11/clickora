@@ -1,4 +1,4 @@
-'use server'; // Change to 'use server' for server component
+'use server';
 
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
@@ -21,10 +21,12 @@ export async function POST(req: Request) {
 
   // Nodemailer transport configuration
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // Use TLS
     auth: {
       user: 'ammarqasimpakistan123@gmail.com', // Your Gmail address
-      pass: process.env.GMAIL_PASSWORD, // Your Gmail app password (use app-specific password if 2FA enabled)
+      pass: process.env.GMAIL_PASSWORD, // Ensure this is the app password
     },
   });
 
