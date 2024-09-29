@@ -1,6 +1,5 @@
 import Newsletter from "@/components/Newsletter";
 import { Button } from "@/components/ui/button";
-import WhyUs from "@/components/WhyUs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -31,9 +30,9 @@ const page = () => {
               </p>
             </div>
             <div className="mt-4 text-neutral-800">
-              Partner with [Your Company Name] for cutting-edge <br /> digital
+              Partner with [Clickora] for cutting-edge <br /> digital
               marketing solutions. We blend creativity and <br /> analytics to
-              create campaigns that engage and <br /> convert
+              create campaigns that engage and <br /> convert.
             </div>
             <div className="mt-4">
               <Link href="/contact">
@@ -137,40 +136,44 @@ const page = () => {
                   expert precision.
                 </li>
                 <li>
-                  <strong>Monitoring & Optimization:</strong> Continuous
-                  monitoring for optimal results.
+                  <strong>Optimization:</strong> Continuous improvement for
+                  better results.
                 </li>
                 <li>
-                  <strong>Reporting & Growth:</strong> Regular performance
-                  reports with insights.
+                  <strong>Support:</strong> Ongoing consultation and campaign
+                  management.
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      <section id="book-meeting" className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
+
+      {/* Newsletter */}
+      <section className="my-12">
+        <Newsletter />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Let's Discuss Your Growth Strategy
+            Let&apos;s Discuss Your Growth Strategy
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="mb-8 text-gray-700">
             Ready to take your digital presence to the next level? Whether you
             need a comprehensive marketing strategy or want to optimize your
             current campaigns, our experts are here to help. Book a free
-            consultation, and let's explore how we can grow your business
+            consultation, and let&apos;s explore how we can grow your business
             together.
           </p>
-          <a
-            href="/book-meeting"
-            className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition-colors duration-300"
-          >
-            Book a Meeting
-          </a>
+          <Link href="/contact">
+            <Button className="px-10 py-5 text-lg bg-blue-800 rounded-full">
+              Book a Meeting
+            </Button>
+          </Link>
         </div>
       </section>
-
-      <Newsletter />
     </>
   );
 };
