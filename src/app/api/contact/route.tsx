@@ -21,14 +21,16 @@ export async function POST(req: Request) {
 
   // Nodemailer transport configuration
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, // Use TLS
+    service: 'gmail',
     auth: {
       user: 'ammarqasimpakistan123@gmail.com', // Your Gmail address
-      pass: process.env.GMAIL_PASSWORD, // Ensure this is the app password
+      pass: process.env.GMAIL_PASSWORD, // Your Gmail app password
     },
+    secure: true,
+    logger: true, // Log events
+    debug: true, // Show debug output
   });
+  
 
   const mailOptions = {
     from: email,
