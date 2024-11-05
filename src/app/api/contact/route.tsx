@@ -46,11 +46,14 @@ export async function POST(req: Request) {
   }
 
   try {
-    // Send email using Nodemailer
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error('Error sending email:', error);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error('Error sending email:', error.message);  // Now you can safely access error.message
+    }
     return NextResponse.json({ error: 'Failed to send message.' }, { status: 500 });
   }
+  
+  
 }
