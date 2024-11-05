@@ -64,7 +64,7 @@ const page = () => {
           </h2>
           <p className="text-lg text-center text-gray-600 mb-10">
             At <strong>[Clickora]</strong>, we understand that effective SEO is
-            not just about rankings; it's about driving qualified traffic
+            not just about rankings; it&apos;s about driving qualified traffic
             and converting visitors into loyal customers. Our comprehensive SEO
             services are designed to boost your online visibility and establish
             your brand as an authority in your industry.
@@ -93,7 +93,7 @@ const page = () => {
             <div className="bg-gradient-to-br from-teal-50 to-teal-100 text-gray-800 rounded-xl p-6 shadow-2xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 w-80">
               <h3 className="text-2xl font-semibold mb-4">On-Page Optimization</h3>
               <p>
-                We enhance your website's structure, content, and metadata
+                We enhance your website&apos;s structure, content, and metadata
                 to ensure search engines can easily index and rank your pages.
               </p>
             </div>
@@ -102,7 +102,7 @@ const page = () => {
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 rounded-xl p-6 shadow-2xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 w-80">
               <h3 className="text-2xl font-semibold mb-4">Quality Link Building</h3>
               <p>
-                Our ethical link-building strategies help improve your site's
+                Our ethical link-building strategies help improve your site&apos;s
                 authority and ranking through quality backlinks.
               </p>
             </div>

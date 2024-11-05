@@ -28,6 +28,8 @@ const Newsletter = () => {
         setMessage(data.error || 'Failed to subscribe. Please try again.');
       }
     } catch (error) {
+      // You can log the error for debugging purposes
+      console.error('Error occurred:', error);
       setMessage('An error occurred. Please try again later.');
     } finally {
       setLoading(false);
