@@ -22,16 +22,24 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="text-gray-400 space-y-2">
               <li>
-                <Link href="/about">About Us</Link>
+                <Link href="/about" className="hover:underline">
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <Link href="/contact" className="hover:underline">
+                  Contact
+                </Link>
               </li>
               <li>
-                <Link href="/blogs">Blog</Link>
+                <Link href="/blogs" className="hover:underline">
+                  Blog
+                </Link>
               </li>
               <li>
-                <Link href="/privacy-policy">Privacy Policy</Link>
+                <Link href="/privacy-policy" className="hover:underline">
+                  Privacy Policy
+                </Link>
               </li>
             </ul>
           </div>
@@ -41,16 +49,24 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Services</h3>
             <ul className="text-gray-400 space-y-2">
               <li>
-                <Link href="/digital-marketing">Digital Marketing</Link>
+                <Link href="/digital-marketing" className="hover:underline">
+                  Digital Marketing
+                </Link>
               </li>
               <li>
-                <Link href="/seo">Search Engine Optimization</Link>
+                <Link href="/seo" className="hover:underline">
+                  Search Engine Optimization
+                </Link>
               </li>
               <li>
-                <Link href="/virtual-assistant">Virtual Assistant</Link>
+                <Link href="/virtual-assistant" className="hover:underline">
+                  Virtual Assistant
+                </Link>
               </li>
               <li>
-                <Link href="/entrepreneurship">Entrepreneurship</Link>
+                <Link href="/entrepreneurship" className="hover:underline">
+                  Entrepreneurship
+                </Link>
               </li>
             </ul>
           </div>
@@ -59,16 +75,16 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
                 <FaFacebookF className="text-white hover:text-blue-500 transition" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
                 <FaTwitter className="text-white hover:text-blue-400 transition" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn">
                 <FaLinkedinIn className="text-white hover:text-blue-600 transition" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
                 <FaInstagram className="text-white hover:text-pink-400 transition" />
               </a>
             </div>

@@ -30,7 +30,6 @@ export async function POST(req: Request) {
     },
   });
   
-
   const mailOptions = {
     from: email,
     to: 'ammarqasimpakistan123@gmail.com', // Your Gmail address to receive the email

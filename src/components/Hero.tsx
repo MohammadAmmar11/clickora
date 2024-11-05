@@ -44,15 +44,15 @@ const Hero = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 to-white">
       {/* Animated Circle Shapes */}
-      <div className="absolute top-0 left-0 w-32 h-32 bg-blue-300 rounded-full opacity-40 transform -translate-x-1/2 -translate-y-1/2 animate-pulse" />
-      <div className="absolute top-10 right-0 w-48 h-48 bg-red-300 rounded-full opacity-40 transform translate-x-1/2 animate-float" />
-      <div className="absolute bottom-10 left-10 w-64 h-64 bg-purple-300 rounded-full opacity-40 transform -translate-x-1/2 animate-float" />
-      <div className="absolute bottom-0 right-0 w-40 h-40 bg-yellow-300 rounded-full opacity-40 transform translate-x-1/2 translate-y-1/2 animate-pulse" />
-      <div className="absolute top-20 left-20 w-24 h-24 bg-green-300 rounded-full opacity-30 animate-float-slow" />
-      <div className="absolute bottom-20 right-20 w-56 h-56 bg-pink-300 rounded-full opacity-30 animate-float-slow" />
+      <div className="absolute top-0 left-0 w-24 h-24 bg-blue-300 rounded-full opacity-40 transform -translate-x-1/2 -translate-y-1/2 animate-pulse" />
+      <div className="absolute top-10 right-0 w-32 h-32 bg-red-300 rounded-full opacity-40 transform translate-x-1/2 animate-float" />
+      <div className="absolute bottom-10 left-10 w-40 h-40 bg-purple-300 rounded-full opacity-40 transform -translate-x-1/2 animate-float" />
+      <div className="absolute bottom-0 right-0 w-24 h-24 bg-yellow-300 rounded-full opacity-40 transform translate-x-1/2 translate-y-1/2 animate-pulse" />
+      <div className="absolute top-20 left-20 w-16 h-16 bg-green-300 rounded-full opacity-30 animate-float-slow" />
+      <div className="absolute bottom-20 right-20 w-32 h-32 bg-pink-300 rounded-full opacity-30 animate-float-slow" />
 
       {/* Content Carousel */}
-      <div className="relative z-10 flex items-center justify-between p-10 mx-10 min-h-[600px]"> {/* Increased min height */}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-6 md:p-10 mx-4 md:mx-10 min-h-[400px] md:min-h-[600px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSlide}
@@ -60,32 +60,32 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center justify-between"
+            className="flex flex-col-reverse md:flex-row items-center md:justify-between w-full"
           >
             {/* Text Content */}
-            <div className="max-w-lg"> {/* Limit text width for better presentation */}
-              <div className="text-5xl font-bold text-neutral-600">
-                <p>{slides[activeSlide].title}</p>
-              </div>
-              <div className="mt-4 text-neutral-800">
+            <div className="text-center md:text-left md:max-w-lg mb-6 md:mb-0">
+              <h1 className="text-3xl md:text-5xl font-bold text-neutral-600">
+                {slides[activeSlide].title}
+              </h1>
+              <p className="mt-4 text-neutral-800 text-sm md:text-base">
                 {slides[activeSlide].subtitle}
-              </div>
+              </p>
               <div className="mt-4">
                 <Link href="/contact">
-                  <Button className="px-10 py-5 text-lg bg-blue-800 rounded-full hover:bg-blue-900 transition-all">
+                  <Button className="px-6 py-3 md:px-10 md:py-5 text-sm md:text-lg bg-blue-800 rounded-full hover:bg-blue-900 transition-all">
                     Contact Us
                   </Button>
                 </Link>
               </div>
             </div>
             {/* Image Content */}
-            <div className="ml-10">
+            <div className="w-full md:w-auto flex justify-center md:ml-10">
               <Image
                 src={slides[activeSlide].imageSrc}
-                height={600} // Increased height for images
-                width={600}  // Increased width for images
+                height={300}
+                width={300}
                 alt="hero-image"
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg md:w-auto md:h-auto"
               />
             </div>
           </motion.div>
@@ -93,29 +93,29 @@ const Hero = () => {
       </div>
 
       {/* Navigation Symbols without Background */}
-      <div className="absolute inset-y-1/2 left-4 transform -translate-y-1/2">
+      <div className="absolute inset-y-1/2 left-2 md:left-4 transform -translate-y-1/2">
         <button
           onClick={prevSlide}
-          className="text-3xl text-blue-800 hover:text-blue-600 transition-all"
+          className="text-2xl md:text-3xl text-blue-800 hover:text-blue-600 transition-all"
         >
-          ● {/* Circle symbol for previous slide */}
+          ●
         </button>
       </div>
-      <div className="absolute inset-y-1/2 right-4 transform -translate-y-1/2">
+      <div className="absolute inset-y-1/2 right-2 md:right-4 transform -translate-y-1/2">
         <button
           onClick={nextSlide}
-          className="text-3xl text-blue-800 hover:text-blue-600 transition-all"
+          className="text-2xl md:text-3xl text-blue-800 hover:text-blue-600 transition-all"
         >
-          ● {/* Circle symbol for next slide */}
+          ●
         </button>
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-5 w-full flex justify-center">
+      <div className="absolute bottom-3 md:bottom-5 w-full flex justify-center">
         {slides.map((_, index) => (
           <span
             key={index}
-            className={`mx-1 h-3 w-3 rounded-full transition-all duration-300 ${
+            className={`mx-1 h-2 w-2 md:h-3 md:w-3 rounded-full transition-all duration-300 ${
               index === activeSlide
                 ? "bg-blue-800"
                 : "bg-gray-300 hover:bg-blue-500"
@@ -128,4 +128,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

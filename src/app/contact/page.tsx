@@ -8,26 +8,35 @@ const ContactForm = () => {
     message: '',
   });
   const [responseMessage, setResponseMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false); // Loading state
 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'contact',
-        ...formData,
-      }),
-    });
+    setIsLoading(true); // Start loading state
 
-    const data = await response.json();
-    if (data.success) {
-      setResponseMessage('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' }); // Clear the input fields
-    } else {
-      setResponseMessage(data.error || 'Failed to send message.');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'contact',
+          ...formData,
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setResponseMessage('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' }); // Clear the input fields
+      } else {
+        setResponseMessage(data.error || 'Failed to send message.');
+      }
+    } catch (error) {
+      setResponseMessage('An error occurred. Please try again later.');
+    } finally {
+      setIsLoading(false); // End loading state
     }
   };
 
@@ -40,7 +49,7 @@ const ContactForm = () => {
       </div>
 
       <div className="relative max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
-        <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">Contact Us</h2>
+        <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800" aria-label="Contact Us">Contact Us</h2>
         <form onSubmit={handleContactSubmit} className="flex flex-col space-y-4">
           <input
             type="text"
@@ -48,6 +57,7 @@ const ContactForm = () => {
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             placeholder="Name"
             required
+            aria-label="Your Name"
             className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <input
@@ -56,6 +66,7 @@ const ContactForm = () => {
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             placeholder="Email"
             required
+            aria-label="Your Email"
             className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <textarea
@@ -63,17 +74,22 @@ const ContactForm = () => {
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             placeholder="Message"
             required
+            aria-label="Your Message"
             className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             rows={4}
           />
           <button
             type="submit"
-            className="bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition duration-300"
+            disabled={isLoading} // Disable button while loading
+            className={`bg-blue-600 text-white p-3 rounded-md transition duration-300 ${isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700'}`}
           >
-            Send
+            {isLoading ? 'Sending...' : 'Send'}
           </button>
           {responseMessage && (
-            <p className={`text-center ${responseMessage.includes('successfully') ? 'text-green-500' : 'text-red-500'}`}>
+            <p
+              aria-live="polite" // Announce messages to screen readers
+              className={`text-center ${responseMessage.includes('successfully') ? 'text-green-500' : 'text-red-500'}`}
+            >
               {responseMessage}
             </p>
           )}

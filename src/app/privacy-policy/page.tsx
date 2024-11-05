@@ -3,17 +3,15 @@ import React from "react";
 const PrivacyPolicy = () => {
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8 text-center">
         Privacy Policy
       </h1>
-      <p className="text-lg text-gray-700 mb-6">
-        At <strong>[Clickora]</strong>, we are committed to protecting
-        your privacy. This Privacy Policy outlines the types of information we
-        collect, how it is used, and how we safeguard it.
+      <p className="text-lg md:text-xl text-gray-700 mb-6 text-center">
+        At <strong>[Clickora]</strong>, we are committed to protecting your privacy. This Privacy Policy outlines the types of information we collect, how it is used, and how we safeguard it.
       </p>
 
       {/* Section 1: Information We Collect */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
         1. Information We Collect
       </h2>
       <p className="text-gray-700 mb-4">
@@ -26,7 +24,7 @@ const PrivacyPolicy = () => {
       </ul>
 
       {/* Section 2: How We Use Information */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
         2. How We Use Information
       </h2>
       <p className="text-gray-700 mb-6">
@@ -40,7 +38,7 @@ const PrivacyPolicy = () => {
       </ul>
 
       {/* Section 3: Information Protection */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
         3. How We Protect Your Information
       </h2>
       <p className="text-gray-700 mb-6">
@@ -48,7 +46,7 @@ const PrivacyPolicy = () => {
       </p>
 
       {/* Section 4: Cookie Usage */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
         4. Use of Cookies
       </h2>
       <p className="text-gray-700 mb-6">
@@ -56,7 +54,7 @@ const PrivacyPolicy = () => {
       </p>
 
       {/* Section 5: Sharing Your Information */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
         5. Sharing Your Information
       </h2>
       <p className="text-gray-700 mb-6">
@@ -64,7 +62,7 @@ const PrivacyPolicy = () => {
       </p>
 
       {/* Section 6: Your Consent */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
         6. Your Consent
       </h2>
       <p className="text-gray-700 mb-6">
@@ -72,14 +70,14 @@ const PrivacyPolicy = () => {
       </p>
 
       {/* Section 7: Contacting Us */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
         7. Contact Us
       </h2>
       <p className="text-gray-700">
         If you have any questions regarding this privacy policy, you can contact us at:
       </p>
       <p className="text-gray-700 mb-6">
-        Email: <a href="mailto:support@clickora.com" className="text-blue-600 underline">support@clickora.com</a>
+        Email: <a href="mailto:info@yourcompany.com" className="text-blue-600 underline">info@yourcompany.com</a>
       </p>
     </div>
   );

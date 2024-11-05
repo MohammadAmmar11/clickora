@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
-      <div className="relative overflow-hidden ">
+      <div className="relative overflow-hidden">
         {/* Animated Circle Shapes */}
         <div className="absolute top-0 left-0 w-32 h-32 bg-blue-300 rounded-full opacity-40 transform -translate-x-1/2 -translate-y-1/2 animate-pulse" />
         <div className="absolute top-10 right-0 w-48 h-48 bg-red-300 rounded-full opacity-40 transform translate-x-1/2 animate-float" />
@@ -19,9 +19,9 @@ const page = () => {
         <div className="absolute bottom-20 right-20 w-56 h-56 bg-pink-300 rounded-full opacity-30 animate-float-slow" />
 
         {/* Content */}
-        <div className="relative z-10 flex items-center justify-between p-10 mx-10">
-          <div>
-            <div className="text-7xl font-bold text-neutral-600">
+        <div className="relative z-10 flex flex-col items-center justify-center p-10 mx-4 lg:flex-row lg:justify-between lg:mx-10">
+          <div className="text-center lg:text-left">
+            <div className="text-4xl md:text-5xl lg:text-7xl font-bold text-neutral-600">
               <p>
                 Crafting <span className="text-blue-800">Success</span>
                 <br />
@@ -36,20 +36,20 @@ const page = () => {
             </div>
             <div className="mt-4">
               <Link href="/contact">
-                <Button className="px-10 py-5 text-lg bg-blue-800 rounded-full">
+                <Button className="px-8 py-4 text-lg bg-blue-800 rounded-full hover:bg-blue-700 transition duration-300">
                   Contact Us
                 </Button>
               </Link>
             </div>
           </div>
           {/* Image Container */}
-          <div>
+          <div className="mt-8 lg:mt-0">
             <Image
               src="/13.png"
               height="500"
               width="600"
               alt="herosection"
-              className="place-items-center"
+              className="max-w-full h-auto rounded-lg"
             />
           </div>
         </div>
@@ -168,7 +168,7 @@ const page = () => {
             together.
           </p>
           <Link href="/contact">
-            <Button className="px-10 py-5 text-lg bg-blue-800 rounded-full">
+            <Button className="px-8 py-4 text-lg bg-blue-800 rounded-full hover:bg-blue-700 transition duration-300">
               Book a Meeting
             </Button>
           </Link>
@@ -178,4 +178,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
