@@ -33,7 +33,7 @@ const ContactForm = () => {
       } else {
         setResponseMessage(data.error || 'Failed to send message.');
       }
-    } catch (error) { // Corrected the variable name
+    } catch {
       setResponseMessage('An error occurred. Please try again later.');
     } finally {
       setIsLoading(false); // End loading state
