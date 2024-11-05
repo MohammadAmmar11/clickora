@@ -30,7 +30,7 @@ const page = () => {
               </p>
             </div>
             <div className="mt-4 text-base md:text-lg text-neutral-800">
-              At <strong>&#91;Clickora&#93;</strong>, we offer comprehensive virtual
+              At <strong>Clickora</strong>, we offer comprehensive virtual
               assistant services that allow <br />
               you to focus on what you do best while we handle the rest. Our
               skilled <br /> professionals provide support tailored to your
@@ -64,7 +64,7 @@ const page = () => {
             Streamline Your Workload with Our Virtual Assistant Services
           </h2>
           <p className="text-base md:text-lg text-center text-gray-600 mb-10">
-            At <strong>&#91;Clickora&#93;</strong>, we provide dedicated virtual
+            At <strong>Clickora</strong>, we provide dedicated virtual
             assistants to manage tasks that free up your time and increase your
             efficiency. Let us help you focus on your core business while we
             take care of the details.
