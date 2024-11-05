@@ -24,7 +24,7 @@ const page = () => {
               <p>
                 <span>Empower Your </span>
                 <br />
-                <span className="text-blue-800">Business </span>With Our
+                <span className="text-blue-800">Business </span> With Our
                 <br /> <span className="text-blue-700">Virtual Assistant </span>
                 Services
               </p>
