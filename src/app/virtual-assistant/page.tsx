@@ -24,7 +24,7 @@ const page = () => {
               <p>
                 <span>Empower Your </span>
                 <br />
-                <span className="text-blue-800">Business </span> With Our
+                <span className="text-blue-800">Business </span>With Our
                 <br /> <span className="text-blue-700">Virtual Assistant </span>
                 Services
               </p>
@@ -109,7 +109,7 @@ const page = () => {
               <h3 className="text-xl md:text-2xl font-semibold mb-4">Content Creation</h3>
               <p className="text-gray-700 text-sm md:text-base">
                 From blogs to newsletters, our virtual assistants produce
-                high-quality content that aligns with your brand's voice
+                high-quality content that aligns with your brand&apos;s voice
                 and goals.
               </p>
             </div>
